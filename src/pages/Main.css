@@ -1,21 +1,22 @@
 .App {
   text-align: center;
+  padding: 2%;
+  background-color: rgba(224, 224, 224, 0.781);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.pokedex{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.pokemonCard {
+  background: linear-gradient(to bottom, red, darkred);
+  height: 200px;
+  width: 180px;
+  border-radius: 10px;
+  margin: 25px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -24,15 +25,24 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.pokemonCard :hover{
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+button{
+  background-color: rgb(194, 194, 194);
+  border-radius: 5px;
+  padding: 10px;
+  border: 2px;
+}
+
+.pageButtons{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.pageButtons :hover{
+  cursor: pointer;
+  background-color: rgba(139, 0, 0, 0.836);
+  color: white;
 }
