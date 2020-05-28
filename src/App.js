@@ -29,9 +29,11 @@ class App extends Component{
             <span>              
               {pokemon.name}
             </span>
-
           </span>
         ))}
+
+          {/* <button onClick= {this.prevPage}>Voltar</button>
+          <button onClick= {this.nextPage}>Avançar</button> */}
       </div>
     );
   }
