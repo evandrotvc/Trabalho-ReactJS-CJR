@@ -3,13 +3,13 @@ import {  Link} from '@reach/router'
 import {FcRight} from 'react-icons/fc'
 import axios from 'axios'
 import styles from './PerfilPokemon.module.css'
-const PerfilPokemon = () => {
+const PerfilPokemon = ({name}) => {
     const [Pokemons , setPokemons] = useState({})
     const [kind , setKind] = useState([])
     const [group , setgroup] = useState(0)
     useEffect(() => {
         async function LoadPokemons(){
-            const response = await axios.get('https://pokedex20201.herokuapp.com/pokemons/wartortle')
+            const response = await axios.get(`https://pokedex20201.herokuapp.com/pokemons/${name}`)
              setPokemons(response.data)
             
              const _kind = response.data.kind
@@ -19,9 +19,15 @@ const PerfilPokemon = () => {
              console.log("a",kind)
 
              let grupo = 0
-            grupo = response.data.id / 3 ;
-            
-            setgroup(parseInt(grupo) * 3  + 1)
+             let modulo = response.data.id % 3
+             if(modulo % 3 === 0 ){
+                setgroup(parseInt(response.data.id -2) )     
+             }
+             else{
+                grupo = response.data.id / 3 ;
+                
+                setgroup(parseInt(grupo) * 3  + 1)
+             }
         }
         LoadPokemons()
         
@@ -50,7 +56,7 @@ const PerfilPokemon = () => {
 
             </div>
             
-            <Link to = "/">
+            <Link to = "/pokemons/">
             <button className={styles.button} path = "/">
                 <span className={styles.explore}>Explorar mais -> </span>
                 <img className={styles.icone}src="https://img.icons8.com/color/48/000000/pokeball--v1.png" alt = "pokebola"/>

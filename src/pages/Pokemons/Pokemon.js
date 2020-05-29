@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {Link} from '@reach/router'
 import { getPokemons } from '../../services/pokemon';
 import './Pokemons.css';
 
@@ -57,11 +58,13 @@ class App extends Component{
         <h1>Pokemons</h1>
         <div className= "pokedex">
         {pokemons.map(pokemon => (
-          <span key={pokemon.id} className="pokemonCard">
+          <span key={pokemon.id}  className="pokemonCard">
+           <Link to= {`/pokemons/${pokemon.name}`}>
             <img src = {pokemon.image_url} alt="pokemon"></img>
             <span>              
               {pokemon.name}
             </span>
+          </Link>
           </span>
         ))}
         </div>

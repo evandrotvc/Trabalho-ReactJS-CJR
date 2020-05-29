@@ -16,7 +16,7 @@ function App() {
         <Login path="/"/>
         <Pokemon path="/pokemons"/>
         <Home path = "/home" />
-        <PerfilPokemon path = "/bumb" />
+        <PerfilPokemon path = "/pokemons/:name"/>
       </Router>
     </div>
   );
