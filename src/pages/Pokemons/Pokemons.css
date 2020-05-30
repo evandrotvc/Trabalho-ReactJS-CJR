@@ -1,7 +1,7 @@
 .App {
     text-align: center;
-    padding: 0;
-    background-color: rgb(238, 238, 238);
+    padding: 2%;
+    background-color: rgba(224, 224, 224, 0.781);
   }
   
   .pokedex{
@@ -9,18 +9,31 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 10px 35px;
   }
-   
-  .pokemonCard:hover{
-    opacity: 70%;
+  
+  .pokemonCard {
+    background: linear-gradient(to bottom, red, darkred);
+    height: 200px;
+    width: 180px;
+    border-radius: 10px;
+    margin: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+  }
+  
+  .pokemonCard :hover{
+    cursor: pointer;
   }
   
   button{
     background-color: rgb(194, 194, 194);
     border-radius: 5px;
     padding: 10px;
-    transition: 0.2s;
+    border: 2px;
   }
   
   .pageButtons{
@@ -30,6 +43,6 @@
   
   .pageButtons :hover{
     cursor: pointer;
-    /* background-color: rgba(139, 0, 0, 0.836); */
+    background-color: rgba(139, 0, 0, 0.836);
     color: white;
   }
