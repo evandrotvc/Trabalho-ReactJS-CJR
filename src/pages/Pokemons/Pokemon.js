@@ -3,7 +3,7 @@ import {Link} from '@reach/router'
 import { getPokemons } from '../../services/pokemon';
 import './Pokemons.css';
 
-class App extends Component{
+class Pokemons extends Component{
 
   state = {
     pokemons: [],
@@ -77,4 +77,4 @@ class App extends Component{
   }
 }
 
-export default App;
+export default Pokemons;
