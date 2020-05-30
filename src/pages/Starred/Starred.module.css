@@ -1,0 +1,16 @@
+.card {
+    display: grid;
+    grid-template-columns: repeat(9 , auto) ;
+}
+
+
+.imagem {
+    border-radius: 50%;
+    background: cornflowerblue;
+    transition: transform 0.2s;
+    margin-bottom: 20px;
+}
+
+.imagem:hover {
+    transform: translateY(-20px); 
+}

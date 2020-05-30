@@ -1,33 +1,64 @@
 import React , {useState, useEffect} from 'react'
-import {  Link} from '@reach/router'
+import {  Link , } from '@reach/router'
 import {FcRight} from 'react-icons/fc'
+import {FaStar} from 'react-icons/fa'
 import axios from 'axios'
 import styles from './PerfilPokemon.module.css'
-const PerfilPokemon = () => {
+const PerfilPokemon = ({name , username}) => {
     const [Pokemons , setPokemons] = useState({})
     const [kind , setKind] = useState([])
     const [group , setgroup] = useState(0)
+    const [Username , setUsername] = useState ( () =>
+    {
+        const getTodos = localStorage.getItem('@React:pokemons')
+        
+        if(getTodos){
+            return JSON.parse(getTodos)
+        }
+//{"username": "evandro" , "starred": [1,2]}
+        return '';
+
+    })
+    useEffect(() => {
+        localStorage.setItem('@React:pokemons' , JSON.stringify(Username))
+    }, [Username])
     useEffect(() => {
         async function LoadPokemons(){
-            const response = await axios.get('https://pokedex20201.herokuapp.com/pokemons/wartortle')
+            const response = await axios.get(`https://pokedex20201.herokuapp.com/pokemons/${name}`)
              setPokemons(response.data)
             
              const _kind = response.data.kind
              let vetor_kind = _kind.split(';')
              
               setKind(vetor_kind)
-             console.log("a",kind)
-
              let grupo = 0
-            grupo = response.data.id / 3 ;
-            
-            setgroup(parseInt(grupo) * 3  + 1)
+             let modulo = response.data.id % 3
+             if(modulo % 3 === 0 ){
+                setgroup(parseInt(response.data.id -2) )     
+             }
+             else{
+                grupo = response.data.id / 3 ;
+                
+                setgroup(parseInt(grupo) * 3  + 1)
+             }
         }
         LoadPokemons()
         
     // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
-
+    function starred (id){
+        let list_starred = []
+        list_starred = Username.starred
+        if(list_starred.includes(id , 0)){
+            return ;
+        }
+        list_starred.push(id)
+        setUsername({ username : Username.username , starred : list_starred})
+        // console.log(Username)
+    }
+    function deslike(id) {
+        console.log("deslike")
+    }
     return (
         <>
         <div className={styles.card2}>
@@ -44,13 +75,14 @@ const PerfilPokemon = () => {
                         <span key = {index} className={styles.kind}> {elem}</span>
                         
                     ))}
-                    
-
+                    <Link to = {`/users/${Username.username}/starred/${name}`} className= {styles.star}>
+                    <FaStar color= "orange" size = {20} onClick={() => starred(Pokemons.id)}/>
+                    </Link>
                 </div>
-
+                    
             </div>
             
-            <Link to = "/">
+            <Link to = "/pokemons/">
             <button className={styles.button} path = "/">
                 <span className={styles.explore}>Explorar mais -> </span>
                 <img className={styles.icone}src="https://img.icons8.com/color/48/000000/pokeball--v1.png" alt = "pokebola"/>

@@ -13,7 +13,7 @@
 }
 
 .img{
-    /* background-color: #ddd; */
+    background-color: #FFD700;
     height: 50vh;
     width: 30vw;
 }
@@ -51,7 +51,7 @@
 .button{
     margin-top: 40px;
     margin-left: 80%;
-    width: 150px;
+    width: 170px;
 
     border-radius: 4px;
     cursor: pointer;
@@ -114,4 +114,11 @@
   }
   .FcRight{
       margin-bottom: 40px;
+  }
+
+  .star {
+      width: 5px;
+      margin-top: 120px;
+      margin-left: 30vw;
+      
   }
