@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Link} from '@reach/router'
+// import {Link} from '@reach/router'
 import { getPokemons } from '../../services/pokemon';
 import './Pokemons.css';
 import Modal from '../../Components/Modal';
@@ -100,7 +100,7 @@ class App extends Component{
 
   handleType = (string_type) => {
     let arr_type = string_type.split(';');
-    if (arr_type.length == 1){
+    if (arr_type.length === 1){
       return this.handleColor(arr_type[0]);      
     }
     else{
@@ -113,8 +113,7 @@ class App extends Component{
     const { pokemons } = this.state;
     
     return (
-      <div className="App">
-        <h1>Pokemons</h1>
+      <div className="app">
 
         {this.state.setPokemonProfile ? (
         <Modal setPokemonProfile={this.handlePokemonProfile.bind(this)} />

@@ -1,5 +1,6 @@
 import React from "react";
-import './Modal.css'
+import './Modal.css';
+import PerfilPokemon from '../pages/PerfilPokemon/PerfilPokemon';
 
 const Modal = ({ id = 'modal', setPokemonProfile}) => {
 
@@ -14,6 +15,7 @@ const Modal = ({ id = 'modal', setPokemonProfile}) => {
             <button onClick={() => setPokemonProfile(false)} className= "close">X</button>
             <div className= "perfilPokemon">
                 <h1>Perfil</h1>
+                {/* <PerfilPokemon/> */}
             </div>
 
         </div>

@@ -1,10 +1,10 @@
 header {
-    background-color: rgb(4, 4, 5);
-    color: white;
+    background: linear-gradient(to bottom, rgb(240, 240, 240), rgb(202, 202, 202));
     margin: auto ;
     display: flex;
-    padding-bottom: 10px;
-    /* justify-content: space-between; */
+    padding: 10px 15px;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .pokedex {
@@ -12,12 +12,8 @@ header {
     display: flex;
     border-radius: 50%;
     padding: 9px;
-    background: rgb(72, 250, 81);
-    color: black;
 }
 
 header a{
-    color: white;
-    margin-left: 10px;
-    
+    margin-left: 10px;    
 }

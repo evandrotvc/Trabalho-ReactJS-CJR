@@ -12,14 +12,14 @@
 }
 
 .modal{
-    width: 50%;
-    height: 60%;
+    width: 70%;
+    height: 80%;
     position: fixed;
     border-radius: 10px;
     background-color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
 }
 
 .close{
@@ -31,10 +31,10 @@
     width: 30px;
     top: 15px;
     right: 15px;
+    cursor: pointer;
 }
 
 .close :hover{
-    background-color: rgba(139, 0, 0, 0.836);
+    /* background-color: rgba(139, 0, 0, 0.836); */
     color: white;
-    cursor: pointer;
 }
