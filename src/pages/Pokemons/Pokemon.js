@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 // import {Link} from '@reach/router'
 import { getPokemons } from '../../services/pokemon';
 import './Pokemons.css';
-import Modal from '../../Components/Modal';
+import Modal from '../../components/Modal';
 
 class Pokemons extends Component{
 

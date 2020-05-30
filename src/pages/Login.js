@@ -1,7 +1,7 @@
-import React from 'react';
-import { Form, Input, Submit } from '../Components/Forms';
+import React, { Component } from 'react';
+import { Form, Input, Submit } from '../components/Forms';
 import { createLogin } from '../services/users';
-import { Link } from '@reach/router';
+import { Link, Redirect } from '@reach/router';
 
 class Login extends Component {
 
@@ -13,12 +13,12 @@ class Login extends Component {
         await createLogin(data)
             .then(resp => {
                 console.log(resp);
-                sessionStorage.setItem('user-token', data.username);
+                localStorage.setItem('user-token', data.username);
                 this.setState({ username: data.username});
             })
             .catch(err => {
                 console.log(err);
-                sessionStorage.setItem('user-token', data.username);
+                localStorage.setItem('user-token', data.username);
                 this.setState({ username: data.username});
             });
     };

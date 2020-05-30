@@ -15,11 +15,11 @@ function App() {
     <div className="App">
       <Header />
       <Router>
-        <Login path="/"/>
-        <Pokemon path="/pokemons"/>
+        <Login path="/login"/>
+        <Pokemon path="/"/>
         <Home path = "/home" />
         <PerfilPokemon path = "/pokemons/:name"/>
-        <Starred path = "/users/:username/starred/:pokemon" />
+        <Starred path = "/users/:username" />
         {/* <DeleteStarred path = "/users/:username/starred/:pokemon" /> */}
       </Router>
     </div>
