@@ -26,9 +26,9 @@
     cursor: pointer;
   }
   
-  .pokemonCard :hover{
-    opacity: 20%;
-  }
+  /* .pokemonCard :hover{
+    opacity: ;
+  } */
   
   button{
     background-color: rgb(194, 194, 194);
