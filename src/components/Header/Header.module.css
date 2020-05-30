@@ -1,9 +1,9 @@
 header {
-    background: linear-gradient(to bottom, rgb(240, 240, 240), rgb(202, 202, 202));
-    margin: auto ;
+    background: linear-gradient(to bottom, rgb(233, 233, 233), rgb(177, 177, 177));
+    margin-bottom: 30px ;
     display: flex;
     padding: 10px 15px;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
 }
 
@@ -16,4 +16,8 @@ header {
 
 header a{
     margin-left: 10px;    
+}
+
+.pokebola{
+    left: 100px;
 }

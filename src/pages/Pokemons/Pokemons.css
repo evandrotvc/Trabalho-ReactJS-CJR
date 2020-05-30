@@ -1,7 +1,7 @@
-.app {
+.App {
     text-align: center;
-    padding: 15px 10px 25px;
-    background-color: rgb(240, 240, 240);
+    padding: 0;
+    background-color: rgb(238, 238, 238);
   }
   
   .pokedex{
@@ -9,24 +9,9 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 0 35px;
+    padding: 10px 35px;
   }
- 
-  .pokemonCard {
-    height: 200px;
-    width: 180px;
-    border-radius: 10px;
-    margin: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
-    cursor: pointer;
-    transition: 0.2s ease-in;
-  }
-  
+   
   .pokemonCard:hover{
     opacity: 70%;
   }
@@ -35,7 +20,6 @@
     background-color: rgb(194, 194, 194);
     border-radius: 5px;
     padding: 10px;
-    border: 2px;
     transition: 0.2s;
   }
   

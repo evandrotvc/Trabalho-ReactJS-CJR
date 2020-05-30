@@ -113,7 +113,7 @@ class App extends Component{
     const { pokemons } = this.state;
     
     return (
-      <div className="app">
+      <div className="App">
 
         {this.state.setPokemonProfile ? (
         <Modal setPokemonProfile={this.handlePokemonProfile.bind(this)} />

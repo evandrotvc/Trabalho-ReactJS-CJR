@@ -6,6 +6,7 @@ import PerfilPokemon from '../PerfilPokemon/PerfilPokemon'
 import Header from '../../Components/Header/Header';
 import Login from '../Login';
 import Pokemon from '../Pokemons/Pokemon';
+import Footer from '../../Components/Footer'
 import './Main.css';
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
         <Home path = "/home" />
         <PerfilPokemon path = "/pokemons/:name"/>
       </Router>
+      <Footer />
     </div>
   );
 }
