@@ -15,7 +15,6 @@ const PerfilPokemon = ({name , username}) => {
         if(getTodos){
             return JSON.parse(getTodos)
         }
-//{"username": "evandro" , "starred": [1,2]}
         return '';
 
     })
