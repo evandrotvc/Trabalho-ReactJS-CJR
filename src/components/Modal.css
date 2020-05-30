@@ -1,0 +1,40 @@
+.container{
+    background-color: rgba(0, 0, 0, 0.4);
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal{
+    width: 50%;
+    height: 60%;
+    position: fixed;
+    border-radius: 10px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.close{
+    background-color: rgb(194, 194, 194);
+    border-radius: 5px;
+    padding: 5px;
+    position: relative;
+    height: 30px;
+    width: 30px;
+    top: 15px;
+    right: 15px;
+}
+
+.close :hover{
+    background-color: rgba(139, 0, 0, 0.836);
+    color: white;
+    cursor: pointer;
+}

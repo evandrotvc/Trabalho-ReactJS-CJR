@@ -1,4 +1,4 @@
-import React , {useState, useEffect} from 'react';
+import React , {useState, useEffect } from 'react';
 import { getPokemonsHome } from '../services/pokemon';
 import { Link } from '@reach/router'
 
@@ -10,28 +10,24 @@ const Home = () => {
             //  console.log(response.data.data)
              setPokemons(response.data.data)
         }
-        LoadPokemons()
-        
+        LoadPokemons()        
     }, [])
+
     return (
-        <>
+        <div>
         
         <Link to = "/bumb">
-        <button><span>Aquiii    </span>  </button>
+        <button><span>Aquiii</span></button>
         </Link>
-      <h1>Home page</h1>
+        <h1>Home page</h1>
         
         { Pokemons.map(pokemon => (
             <div  key ={pokemon.id} >
                 <img src= {pokemon.image_url} alt= {pokemon.name}/>
-            </div>
-         
-            
-         ) )
-        }
+            </div>                   
+        ))}
         
-         
-       </> 
+       </div> 
      
     )
 }

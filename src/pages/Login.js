@@ -1,5 +1,5 @@
 import React from 'react';
-import { Form, Input, Submit } from '../components/Forms';
+import { Form, Input, Submit } from '../Components/Forms';
 import { createLogin } from '../services/users';
 
 const Login = () => {

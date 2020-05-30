@@ -10,7 +10,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
   }
-  
+ 
   .pokemonCard {
     background: linear-gradient(to bottom, red, darkred);
     height: 200px;
@@ -23,10 +23,11 @@
     justify-content: center;
     font-size: calc(10px + 2vmin);
     color: white;
+    cursor: pointer;
   }
   
   .pokemonCard :hover{
-    cursor: pointer;
+    opacity: 20%;
   }
   
   button{

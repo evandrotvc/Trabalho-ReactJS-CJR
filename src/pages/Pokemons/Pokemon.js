@@ -2,13 +2,17 @@ import React, { Component } from 'react';
 import {Link} from '@reach/router'
 import { getPokemons } from '../../services/pokemon';
 import './Pokemons.css';
+import Modal from '../../Components/Modal';
 
 class App extends Component{
+
+  pokemonProfile(){};
 
   state = {
     pokemons: [],
     pokemonInfo: {},
     pages: 1,
+    setPokemonProfile: false,
   }
 
   componentDidMount(){
@@ -49,6 +53,8 @@ class App extends Component{
     this.loadPokemon(pageNum);
   }
 
+  handlePokemonProfile = (show) => {this.setState({setPokemonProfile:show})}
+
   render(){
 
     const { pokemons } = this.state;
@@ -56,18 +62,28 @@ class App extends Component{
     return (
       <div className="App">
         <h1>Pokemons</h1>
+
+        {this.state.setPokemonProfile ? (
+        <Modal setPokemonProfile={this.handlePokemonProfile.bind(this)} />
+        ) : null}
+
         <div className= "pokedex">
         {pokemons.map(pokemon => (
-          <span key={pokemon.id}  className="pokemonCard">
-           <Link to= {`/pokemons/${pokemon.name}`}>
+          <div key={pokemon.id} 
+          onClick={() => this.setState({setPokemonProfile: true})}
+           className="pokemonCard"
+           >
+           {/* <Link to= {`/pokemons/${pokemon.name}`}> */}
             <img src = {pokemon.image_url} alt="pokemon"></img>
-            <span>              
+            <div>              
               {pokemon.name}
-            </span>
-          </Link>
-          </span>
+            </div>
+          {/* </Link> */}
+
+          </div>
         ))}
         </div>
+
         <div className="pageButtons">
           <button onClick= {this.prevPage}>Voltar</button>
           <button onClick= {this.nextPage}>Avançar</button>
