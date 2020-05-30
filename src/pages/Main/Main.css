@@ -1,8 +1,8 @@
 .App {
-  text-align: center;
-  padding: 2%;
-  background-color: rgba(224, 224, 224, 0.781);
-}
+    text-align: center;
+    padding: 0;
+    background-color: rgb(238, 238, 238);
+  }
 
 .pokedex{
   display: flex;
@@ -12,17 +12,18 @@
 }
 
 .pokemonCard {
-  background: linear-gradient(to bottom, red, darkred);
   height: 200px;
   width: 180px;
   border-radius: 10px;
-  margin: 25px;
+  margin: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  cursor: pointer;
+  transition: 0.2s ease-in;
 }
 
 .pokemonCard :hover{

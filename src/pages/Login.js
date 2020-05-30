@@ -1,6 +1,11 @@
+<<<<<<< HEAD
 import React, { Component, useState } from 'react';
 import { Form, Input, Submit } from '../components/Forms';
 import { Redirect } from 'react-router-dom';
+=======
+import React from 'react';
+import { Form, Input, Submit } from '../Components/Forms';
+>>>>>>> origin/Merges
 import { createLogin } from '../services/users';
 import { Link } from '@reach/router';
 

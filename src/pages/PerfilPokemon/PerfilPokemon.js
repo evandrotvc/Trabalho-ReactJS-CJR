@@ -3,10 +3,19 @@ import { Link } from '@reach/router'
 import { FcRight } from 'react-icons/fc'
 import axios from 'axios'
 import styles from './PerfilPokemon.module.css'
+<<<<<<< HEAD
 const PerfilPokemon = ({ name }) => {
     const [Pokemons, setPokemons] = useState({})
     const [kind, setKind] = useState([])
     const [group, setgroup] = useState(0)
+=======
+
+const PerfilPokemon = ({name}) => {
+    const [Pokemons , setPokemons] = useState({})
+    const [kind , setKind] = useState([])
+    const [group , setgroup] = useState(0)
+    
+>>>>>>> origin/Merges
     useEffect(() => {
         async function LoadPokemons() {
             const response = await axios.get(`https://pokedex20201.herokuapp.com/pokemons/${name}`)

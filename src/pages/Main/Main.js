@@ -3,10 +3,14 @@ import { Router } from "@reach/router";
 
 import Home from '../Home';
 import PerfilPokemon from '../PerfilPokemon/PerfilPokemon'
-import Header from '../../components/Header/Header';
+import Header from '../../Components/Header/Header';
 import Login from '../Login';
 import Pokemon from '../Pokemons/Pokemon';
+<<<<<<< HEAD
 import NotFound from '../NotFound';
+=======
+import Footer from '../../Components/Footer'
+>>>>>>> origin/Merges
 import './Main.css';
 import User from '../User';
 import LogOut from '../../components/LogOut';
@@ -24,6 +28,7 @@ function App() {
         <PerfilPokemon path = "/pokemons/:name"/>
         <NotFound default />
       </Router>
+      <Footer />
     </div>
   );
 }
