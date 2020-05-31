@@ -1,14 +1,7 @@
 .App {
   text-align: center;
-  padding: 2%;
-  background-color: rgba(224, 224, 224, 0.781);
-}
-
-.pokedex{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  padding: 0;
+  background-color: rgb(238, 238, 238);
 }
 
 .pokemonCard {
@@ -43,6 +36,11 @@ button{
 
 .pageButtons :hover{
   cursor: pointer;
-  background-color: rgba(139, 0, 0, 0.836);
+  opacity: 70%;
+  background-color: rgb(61, 114, 158);
   color: white;
+}
+
+.content{
+  min-height: 82vh;
 }
