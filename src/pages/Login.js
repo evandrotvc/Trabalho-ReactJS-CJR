@@ -6,11 +6,12 @@ import { Link, Redirect } from '@reach/router';
 class Login extends Component {
 
     state = {
-        username: ''
+        username: '',
     };
 
     send = async (data) => {
-        await createLogin(data)
+        if (data.username) {
+            await createLogin(data)
             .then(resp => {
                 console.log(resp);
                 localStorage.setItem('user-token', data.username);
@@ -21,6 +22,7 @@ class Login extends Component {
                 localStorage.setItem('user-token', data.username);
                 this.setState({ username: data.username});
             });
+        }
     };
 
     render() {
@@ -33,8 +35,9 @@ class Login extends Component {
                 <div>
                     <Form onSubmit={this.send}>
                         <h2>Login</h2>
-                        <Input name="name" type="text" label="Usuário:" defaultValue="" />
-                        <Link to={`/users/${this.username}`}> <Submit>Entrar/Cadastrar</Submit> </Link>
+                        <Input name="username" type="text" label="Usuário:" defaultValue="" />
+                        {/* <Link to={`/users/${this.username}`}> <Submit>Entrar/Cadastrar</Submit> </Link> */}
+                        <Submit>Entrar/Cadastrar</Submit>
                     </Form>
                 </div >
             );
