@@ -27,10 +27,7 @@ const PerfilPokemon = ({name , username}) => {
     useEffect(() => {
         async function LoadPokemons(){
             const response = await ProfilePokemon(name)
-            // console.log(response)
-            // return;
-             setPokemons(response.data)
-            
+             setPokemons(response.data)            
              const _kind = response.data.kind
              let vetor_kind = _kind.split(';')
              
@@ -80,8 +77,9 @@ const PerfilPokemon = ({name , username}) => {
                         <span key = {index} className={styles.kind}> {elem}</span>
                         
                     ))}
+                    <br></br>
                     <Link to = {`/users/${Username.username}/`} className= {styles.star}>
-                    <FaStar color= "orange" size = {20} onClick={(e) => starred(e)}/>
+                    <FaStar color= "orange" size = {30} onClick={(e) => starred(e)}/>
                     </Link>
                 </div>
                     

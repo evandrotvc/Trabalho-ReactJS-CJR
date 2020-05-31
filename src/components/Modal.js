@@ -15,7 +15,7 @@ const Modal = ({ id = 'modal', setPokemonProfile}) => {
             <button onClick={() => setPokemonProfile(false)} className= "close">X</button>
             <div className= "perfilPokemon">
                 <h1>Perfil</h1>
-                {/* <PerfilPokemon/> */}
+                <PerfilPokemon/>
             </div>
 
         </div>

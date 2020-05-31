@@ -2,6 +2,7 @@ import React , {useState } from 'react'
 import  styles from './PerfilUser.module.css'
 import {FaThumbsDown} from 'react-icons/fa'
 
+
 import {list,Deslike} from '../../services/users'
 const PerfilUser = ({username , pokemon}) => {
     const [load , setLoad] = useState(true)
