@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-// import {Link} from '@reach/router'
+import {Link} from '@reach/router'
 import { getPokemons } from '../../services/pokemon';
 import './Pokemons.css';
 import Modal from '../../components/Modal';
@@ -115,9 +115,9 @@ class Pokemons extends Component{
     return (
       <div className="App">
 
-        {this.state.setPokemonProfile ? (
+        {/* {this.state.setPokemonProfile ? (
         <Modal setPokemonProfile={this.handlePokemonProfile.bind(this)} />
-        ) : null}
+        ) : null} */}
 
         <div className= "pokedex">
         {pokemons.map(pokemon => (
@@ -126,12 +126,12 @@ class Pokemons extends Component{
            className="pokemonCard"
            style =  {{background: this.handleType(pokemon.kind)}}
            >
-           {/* <Link to= {`/pokemons/${pokemon.name}`}> */}
+           <Link to= {`/pokemons/${pokemon.name}`}>
             <img src = {pokemon.image_url} alt="pokemon"></img>
             <div>              
               {pokemon.name}
             </div>
-          {/* </Link> */}
+          </Link>
 
           </div>
         ))}

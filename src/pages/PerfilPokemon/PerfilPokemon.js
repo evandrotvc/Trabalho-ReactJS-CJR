@@ -2,7 +2,10 @@ import React , {useState, useEffect} from 'react'
 import {  Link , } from '@reach/router'
 import {FcRight} from 'react-icons/fc'
 import {FaStar} from 'react-icons/fa'
-import axios from 'axios'
+// import axios from 'axios'
+import {ProfilePokemon} from '../../services/pokemon'
+import {Like} from '../../services/users'
+
 import styles from './PerfilPokemon.module.css'
 const PerfilPokemon = ({name , username}) => {
     const [Pokemons , setPokemons] = useState({})
@@ -10,7 +13,7 @@ const PerfilPokemon = ({name , username}) => {
     const [group , setgroup] = useState(0)
     const [Username , setUsername] = useState ( () =>
     {
-        const getTodos = localStorage.getItem('@React:pokemons')
+        const getTodos = localStorage.getItem('user-token')
         
         if(getTodos){
             return JSON.parse(getTodos)
@@ -19,11 +22,13 @@ const PerfilPokemon = ({name , username}) => {
 
     })
     useEffect(() => {
-        localStorage.setItem('@React:pokemons' , JSON.stringify(Username))
+        localStorage.setItem('user-token' , JSON.stringify(Username))
     }, [Username])
     useEffect(() => {
         async function LoadPokemons(){
-            const response = await axios.get(`https://pokedex20201.herokuapp.com/pokemons/${name}`)
+            const response = await ProfilePokemon(name)
+            // console.log(response)
+            // return;
              setPokemons(response.data)
             
              const _kind = response.data.kind
@@ -45,19 +50,20 @@ const PerfilPokemon = ({name , username}) => {
         
     // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
-    function starred (id){
-        let list_starred = []
-        list_starred = Username.starred
-        if(list_starred.includes(id , 0)){
-            return ;
+    async function starred (e){
+        try{
+            const response = await Like(Username.username , name)
+            console.log(response.data)
+            return;
         }
-        list_starred.push(id)
-        setUsername({ username : Username.username , starred : list_starred})
-        // console.log(Username)
+        
+        catch(err){ 
+            alert('Pokemon já favoritado.')
+            // e.preventDefault()
+            return;
+        }
     }
-    function deslike(id) {
-        console.log("deslike")
-    }
+    
     return (
         <>
         <div className={styles.card2}>
@@ -74,8 +80,8 @@ const PerfilPokemon = ({name , username}) => {
                         <span key = {index} className={styles.kind}> {elem}</span>
                         
                     ))}
-                    <Link to = {`/users/${Username.username}/starred/${name}`} className= {styles.star}>
-                    <FaStar color= "orange" size = {20} onClick={() => starred(Pokemons.id)}/>
+                    <Link to = {`/users/${Username.username}/`} className= {styles.star}>
+                    <FaStar color= "orange" size = {20} onClick={(e) => starred(e)}/>
                     </Link>
                 </div>
                     
@@ -97,6 +103,7 @@ const PerfilPokemon = ({name , username}) => {
                 <img className={styles.evolucoes} src = {`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${group+2}.png`}alt = "e" />
             </div>
           </div>
+        
         </>
     )
 }

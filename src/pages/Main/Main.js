@@ -6,8 +6,8 @@ import PerfilPokemon from '../PerfilPokemon/PerfilPokemon'
 import Header from '../../components/Header/Header';
 import Login from '../Login';
 import Pokemon from '../Pokemons/Pokemon';
-import Starred from '../Starred/Starred';
-import DeleteStarred from '../DeleteStarred/DeleteStarred';
+import PerfilUser from '../PerfilUser/PerfilUser';
+
 import './Main.css';
 
 function App() {
@@ -16,11 +16,10 @@ function App() {
       <Header />
       <Router>
         <Login path="/login"/>
-        <Pokemon path="/"/>
+        <Pokemon path="/pokemons"/>
         <Home path = "/home" />
         <PerfilPokemon path = "/pokemons/:name"/>
-        <Starred path = "/users/:username" />
-        {/* <DeleteStarred path = "/users/:username/starred/:pokemon" /> */}
+        <PerfilUser path = "/users/:username" />
       </Router>
     </div>
   );
