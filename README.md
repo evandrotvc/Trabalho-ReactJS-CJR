@@ -2,6 +2,7 @@
 1. Execute yarn na raiz do projeto para instalar as dependências.
 2. Basta executar yarn start para testar a aplicação.
 
+![PerfilPokedex](https://github.com/evandrotvc/Trabalho-ReactJS-CJR/blob/master/src/assets/Captura%20de%20Tela%202020-06-01%20%C3%A0s%2011.15.33.png)
 
 
 ## Observações
