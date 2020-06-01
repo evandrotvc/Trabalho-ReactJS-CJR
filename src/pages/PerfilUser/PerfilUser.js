@@ -43,20 +43,22 @@ const PerfilUser = ({username , pokemon}) => {
         
         <h1>Perfil Treinador</h1>
         <h2>{load || info.user.username}</h2>
-        
-        <div className= {styles.card}>
-            <img className={styles.treinador} src= "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTdlvbcHe0b4UQhQlPY_u2QwRy_Y-n2fjC5DIbiOlNgQK80mYYY&usqp=CAU" alt = "treinador" />
-            <h2>Favoritados</h2>
-            <div className= {styles.favorites}>
-            {load || info.pokemons.map(pokemon => (            
-                <span key = {pokemon.id}>
-                <FaThumbsDown className={styles.deslike} size= {20} onClick= {() => deslike(pokemon , info.user)}/>
-                <img  className= {styles.imagem} src= {pokemon.image_url}  alt= "pokemon"/>
-                </span>                       
-            ))}
+
+        <div className={styles.profile}>
+            <div className= {styles.card}>
+                <img className={styles.treinador} src= "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTdlvbcHe0b4UQhQlPY_u2QwRy_Y-n2fjC5DIbiOlNgQK80mYYY&usqp=CAU" alt = "treinador" />
+                <h2 className={styles.subtitulo}>Favoritados</h2>
+                <div className= {styles.favorites}>
+                {load || info.pokemons.map(pokemon => (            
+                    <span key = {pokemon.id}>
+                    <FaThumbsDown className={styles.deslike} size= {25} onClick= {() => deslike(pokemon , info.user)}/>
+                    <img  className= {styles.imagem} src= {pokemon.image_url}  alt= "pokemon"/>
+                    </span>                       
+                ))}
+                </div>
             </div>
         </div>
-        
+
         </>
     )
 }

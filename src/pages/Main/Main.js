@@ -17,7 +17,7 @@ function App() {
     <div className="App">
       <Header />
       <Router>
-        <Login path="/users/"/>
+        <Login path="/"/>
         <Pokemon path="/pokemons"/>
         <Home path = "/home" />
         <PerfilPokemon path = "/pokemons/:name"/>

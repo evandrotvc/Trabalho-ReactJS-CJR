@@ -1,23 +1,14 @@
+.profile{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .card {
-    border: 1px solid black;
+    border: 1.5px solid gray;
     border-radius: 7px;
-}
-
-.favorites {
-    display: grid;
-    grid-template-columns: repeat(9 , auto) ;
-}
-
-
-.imagem {
-    border-radius: 50%;
-    background: cornflowerblue;
-    transition: transform 0.2s;
-    margin-bottom: 20px;
-}
-
-.imagem:hover {
-    transform: translateY(-20px); 
+    width: 70vw;
+    padding: 25px;
 }
 
 .treinador {
@@ -26,12 +17,33 @@
     height: 200px;
     margin: 20px 0;
 }
+
+.subtitulo{
+    margin-bottom: 40px;
+}
+
+.favorites {
+    display: grid;
+    grid-template-columns: repeat(8 , auto) ;
+    width: 65vw;
+}
+
+.imagem {
+    border-radius: 50%;
+    background: cornflowerblue;
+    transition: 0.3s;
+    margin: 5px 12px 20px;
+}
+
+.imagem:hover {
+    transform: translateY(-15px); 
+}
+
 .deslike {
-    
-    background-color: khaki;
+    border-radius: 25%;
+    background-color: white;
     cursor: pointer;
     margin-bottom: 100px;
-    /* margin-left: 20px; */
     position: absolute;
     
 }

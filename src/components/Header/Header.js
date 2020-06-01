@@ -20,11 +20,11 @@ const Header = () => {
             <h1 className= {styles.pokedex}>Pokedex</h1>
         </Link>
         <div className="linkButtons">
-            <Link className="navButton" to="/users/">
+            <Link className="navButton" to="/">
                 <button >Login</button>
             </Link>
 
-            <Link className="navButton" to="/" >
+            <Link className="navButton" to="/pokemons" >
                 <button >Home</button>
             </Link>
             
