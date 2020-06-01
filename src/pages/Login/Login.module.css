@@ -28,12 +28,3 @@ Input:focus{
     outline: none;
     box-shadow: 0 4px 4px rgba(0, 0, 0, .25);
 }
-
-Submit{
-    background-color: #00cc99;
-    color: whitesmoke;
-    padding: .5rem 2rem;
-    border: none;
-    border-radius: 5px;
-    margin-top: 1rem;
-}
