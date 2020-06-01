@@ -29,9 +29,20 @@ export const Submit = ({ children }) => {
   const pending = React.useContext(RequestContext);
 
   return (
-    <button type="submit" disabled={pending}>
+    <button
+      style={{
+        backgroundColor: '#00cc99',
+        color: 'whitesmoke',
+        padding: '.5rem 2rem',
+        border: 'none',
+        borderRadius: '5px',
+        marginTop: '1rem',
+        width: '20%',
+        height: '40px'
+      }}
+      type="submit" disabled={pending} >
       {pending ? "Loading..." : children}
-    </button>
+    </button >
   );
 };
 
