@@ -99,7 +99,7 @@ class Pokemons extends Component{
   }
 
   handleType = (string_type) => {
-    let arr_type = string_type.split(';');
+    let arr_type = string_type.split(';').sort();
     if (arr_type.length === 1){
       return this.handleColor(arr_type[0]);      
     }
@@ -121,25 +121,25 @@ class Pokemons extends Component{
 
         <div className= "pokedex">
         {pokemons.map(pokemon => (
+          <Link style={{textDecoration:'none'}} to= {`/pokemons/${pokemon.name}`}>
           <div key={pokemon.id} 
           onClick={() => this.setState({setPokemonProfile: true})}
            className="pokemonCard"
            style =  {{background: this.handleType(pokemon.kind)}}
            >
-           <Link to= {`/pokemons/${pokemon.name}`}>
             <img src = {pokemon.image_url} alt="pokemon"></img>
             <div>              
               {pokemon.name}
             </div>
-          </Link>
 
           </div>
+          </Link>
         ))}
         </div>
 
         <div className="pageButtons">
-          <button onClick= {this.prevPage}>Voltar</button>
-          <button onClick= {this.nextPage}>Avançar</button>
+          {this.state.pages!==1 && <button onClick= {this.prevPage}>Voltar</button>}
+          {this.state.pokemonInfo.next_page !== null && <button onClick= {this.nextPage}>Avançar</button>}
         </div>
       </div>
     );
