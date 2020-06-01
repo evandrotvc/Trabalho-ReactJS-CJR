@@ -16,10 +16,22 @@ const Header = () => {
     return (
     <header >
         <img src="https://img.icons8.com/color/48/000000/pokeball--v1.png" alt = "pokebola"/>
-        <span className= {styles.pokedex}>Pokedex</span>
-            <Link to="/users/">Login</Link>
-            <Link to="/pokemons" >Home</Link>
-            <Link to={`/users/${username.username}`}  onClick={() => ClickPerfil() }>Perfil</Link>
+        <Link style={{textDecoration:'none'}} to="/">
+            <h1 className= {styles.pokedex}>Pokedex</h1>
+        </Link>
+        <div className="linkButtons">
+            <Link className="navButton" to="/users/">
+                <button >Login</button>
+            </Link>
+
+            <Link className="navButton" to="/" >
+                <button >Home</button>
+            </Link>
+            
+            <Link className="navButton" to={`/users/${username.username}`}  onClick={() => ClickPerfil() }>
+                <button >Perfil</button>
+            </Link>
+        </div>
     </header>
     )
 

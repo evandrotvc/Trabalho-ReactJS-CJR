@@ -138,8 +138,8 @@ class Pokemons extends Component{
         </div>
 
         <div className="pageButtons">
-          {this.state.pages!==1 && <button onClick= {this.prevPage}>Voltar</button>}
-          {this.state.pokemonInfo.next_page !== null && <button onClick= {this.nextPage}>Avançar</button>}
+          {this.state.pages!==1 && <button className="prevNextPage" onClick= {this.prevPage}>Voltar</button>}
+          {this.state.pokemonInfo.next_page !== null && <button className="prevNextPage" onClick= {this.nextPage}>Avançar</button>}
         </div>
       </div>
     );
