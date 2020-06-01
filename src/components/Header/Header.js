@@ -24,7 +24,7 @@ const Header = () => {
                 <button >Login</button>
             </Link>
 
-            <Link className="navButton" to="/" >
+            <Link className="navButton" to="/pokemons" >
                 <button >Home</button>
             </Link>
             
