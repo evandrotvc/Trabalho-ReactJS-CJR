@@ -1,0 +1,30 @@
+.login{
+    color: whitesmoke;
+    padding: 10px 10px;
+}
+
+.background{
+    height: 60vh;
+    border: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+    background: linear-gradient(#4b69ec, #8d9de4);
+}
+
+Input{
+    border: none;
+    background-color: rgba(0, 0, 0, .25);
+    color: whitesmoke;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    width: 60%;
+    font-size: 1.2rem;
+    border-radius: 7px;
+    transition: all .1s linear;
+}
+
+Input:focus{
+    outline: none;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, .25);
+}

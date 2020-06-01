@@ -1,0 +1,38 @@
+.pokedex{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding: 10px 50px;
+}
+ 
+.pokemonCard {
+  height: 200px;
+  width: 180px;
+  border-radius: 10px;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  transition: 0.2s;
+}
+ 
+.pokemonCard:hover{
+  cursor: pointer;
+  transform: scale(1.1);
+}
+ 
+button{
+  background-color: rgb(194, 194, 194);
+  border-radius: 5px;
+  padding: 10px;
+  transition: 0.2s;
+}
+ 
+.pageButtons{
+  display: flex;
+  justify-content: space-evenly;
+}

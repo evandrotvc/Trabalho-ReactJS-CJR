@@ -1,0 +1,46 @@
+.App {
+  text-align: center;
+  padding: 0;
+  background-color: rgb(238, 238, 238);
+}
+
+.pokemonCard {
+  background: linear-gradient(to bottom, red, darkred);
+  height: 200px;
+  width: 180px;
+  border-radius: 10px;
+  margin: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.pokemonCard :hover{
+  cursor: pointer;
+}
+
+button{
+  background-color: rgb(194, 194, 194);
+  border-radius: 5px;
+  padding: 10px;
+  border: 2px;
+}
+
+.pageButtons{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.pageButtons :hover{
+  cursor: pointer;
+  opacity: 70%;
+  background-color: rgb(61, 114, 158);
+  color: white;
+}
+
+.content{
+  min-height: 82vh;
+}

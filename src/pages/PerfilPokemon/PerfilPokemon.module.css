@@ -1,0 +1,125 @@
+
+.h1 {
+    margin: 0px 40%;
+    display: block;
+}
+
+.card {
+    display: flex;
+    margin-top: 5%;
+    align-items: center;
+    height: 40vh;
+    width: 100vw;
+}
+
+.img{
+    background-color: #FFD700;
+    height: 50vh;
+    width: 30vw;
+}
+
+.info{
+    background-color: #87CEFA;
+    border: 1px solid black;
+    height: 50vh;
+    width: 69vw;
+    align-items: center;
+    border-radius: 10px;
+
+    display: grid;    
+    grid-template-columns: 15vw 15vw;
+    grid-template-rows: 50px 40px 1px;
+    
+
+    box-shadow: 0px 0px 0px 0px rgb(72, 250, 81);
+    transition: box-shadow 0.4s linear;
+}
+.info:hover {
+    box-shadow: 0px 0px 0px 2px rgb(72, 250, 81);
+}
+
+.kind{
+    /* align-items: center; */
+    width: 120px;
+    height: auto;
+    background-color: rgb(154, 62, 240);
+    border-radius: 3px;
+    text-align: center;
+    
+}
+
+.button{
+    margin-top: 40px;
+    margin-left: 80%;
+    width: 170px;
+
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.4s ;
+    background-color: #fb2259;
+  /* margin: 5px; */
+}
+
+/* Effeitos de transição do botão */
+.button .explore:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  .button:hover .explore {
+    padding-right: 25px;
+  }
+  
+  .button:hover .expore:after {
+    opacity: 1;
+    right: 0;
+  }
+  .icone {
+      width: 20px;
+      height: 20px;
+      margin-top: 2px;
+      
+      border-radius: 50%;
+  }
+  .explore {
+    color: #ddd;
+  font-style: italic;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+  margin-bottom: 2px;
+  }
+
+  .lista_evolucoes{
+      border: 1px solid black;
+      width: 40vw;
+      margin: 40px auto auto auto;
+      border-radius: 6px;
+      background-color: greenyellow;
+      transition: transform 0.2s;
+        
+  }
+  .lista_evolucoes:hover {
+    transform: translateX(20px); 
+}
+  .evolucoes {
+      border-radius: 50%;
+      background-color: CornflowerBlue	;
+      margin-right: 5px;
+
+  }
+  .FcRight{
+      margin-bottom: 40px;
+  }
+
+  .star {
+      width: 5px;
+      /* margin-top: 120px; */
+      margin-left: 0vw;
+      
+  }
+  
