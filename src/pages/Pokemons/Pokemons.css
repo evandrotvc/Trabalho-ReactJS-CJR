@@ -18,20 +18,30 @@
   font-size: calc(10px + 2vmin);
   color: white;
   transition: 0.2s;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
  
 .pokemonCard:hover{
   cursor: pointer;
   transform: scale(1.1);
 }
- 
-button{
+
+.prevNextPage{
   background-color: rgb(194, 194, 194);
   border-radius: 5px;
   padding: 10px;
+  border: 0px;
+  cursor: pointer;
   transition: 0.2s;
 }
- 
+
+.prevNextPage:hover{
+  cursor: pointer;
+  opacity: 80%;
+  background-color: rgb(61, 114, 158);
+  color: white;
+}
+
 .pageButtons{
   display: flex;
   justify-content: space-evenly;
