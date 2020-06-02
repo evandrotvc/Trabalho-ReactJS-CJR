@@ -16,14 +16,16 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <Router>
-        <Login path="/"/>
-        <Pokemon path="/pokemons"/>
-        <Home path = "/home" />
-        <PerfilPokemon path = "/pokemons/:name"/>
-        <PerfilUser path = "/users/:username" />
-        <NotFound default />
-      </Router>
+      <div className="content">
+        <Router>
+          <Login path="/"/>
+          <Pokemon path="/pokemons"/>
+          <Home path = "/home" />
+          <PerfilPokemon path = "/pokemons/:name"/>
+          <PerfilUser path = "/users/:username" />
+          <NotFound default />
+        </Router>
+      </div>
       <Footer />
     </div>
   );

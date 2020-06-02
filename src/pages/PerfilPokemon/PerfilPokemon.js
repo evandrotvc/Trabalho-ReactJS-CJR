@@ -64,30 +64,33 @@ const PerfilPokemon = ({name , username}) => {
     return (
         <>
         <div className={styles.card2}>
-            <h1 className={styles.h1}>{Pokemons.name}N˚{Pokemons.id}</h1> 
+            <h1 className={styles.h1}>{Pokemons.name}
+                    <Link to = {`/users/${Username.username}/`} className= {styles.star}>
+                    <FaStar color= "orange" size = {30} onClick={(e) => starred(e)}/>
+                    </Link>
+            </h1> 
+                    
             <div className={styles.card}  key ={Pokemons.id} >
                 <img className={styles.img} src= {Pokemons.image_url} alt= {Pokemons.name}/>
                 <div className={styles.info} >
                     <span className={styles.span}>Height: {Pokemons.height}</span> 
                     <span className={styles.span}>Weight: {Pokemons.weight}</span> 
                     
-                    <span >Type</span> <br></br>
+                    <span>
+                        Type:
+                        {kind.map((elem , index) => (
+                            <span key = {index} className={styles.kind}>{elem}</span>
+                        ))}
+                    </span>
 
-                    {kind.map((elem , index) => (
-                        <span key = {index} className={styles.kind}> {elem}</span>
-                        
-                    ))}
-                    <br></br>
-                    <Link to = {`/users/${Username.username}/`} className= {styles.star}>
-                    <FaStar color= "orange" size = {30} onClick={(e) => starred(e)}/>
-                    </Link>
                 </div>
+                
                     
             </div>
             
-            <Link to = "/pokemons/">
+            <Link style={{textDecoration: 'none'}}to = "/pokemons/">
             <button className={styles.button} path = "/">
-                <span className={styles.explore}>Explorar mais -> </span>
+                <span className={styles.explore}>Explorar mais </span>
                 <img className={styles.icone}src="https://img.icons8.com/color/48/000000/pokeball--v1.png" alt = "pokebola"/>
             </button>
             </Link>
@@ -100,7 +103,7 @@ const PerfilPokemon = ({name , username}) => {
                 <FcRight className= {styles.FcRight} size={20}/>
                 <img className={styles.evolucoes} src = {`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${group+2}.png`}alt = "e" />
             </div>
-          </div>
+        </div>
         
         </>
     )

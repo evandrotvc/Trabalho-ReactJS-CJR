@@ -33,13 +33,15 @@ class Login extends Component {
 
     render() {
         return (
-            <div className={style.background}>
-                <Form onSubmit={this.send}>
-                    <h1 className={style.login}>Login</h1>
-                    <Input name="username" type="text" label="" defaultValue="" />
-                    <Submit>Entrar</Submit>
-                </Form>
-            </div>
+            <div className={style.loginContainer}>
+                <div className={style.background}>
+                    <Form onSubmit={this.send}>
+                        <h2 className={style.login}>Login</h2>
+                        <Input name="username" type="text" label="" defaultValue="" />
+                        <Submit>Entrar</Submit>
+                    </Form>
+                </div>
+            </div> 
         );
     }
 }

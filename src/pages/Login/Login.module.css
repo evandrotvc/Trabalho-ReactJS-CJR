@@ -1,15 +1,28 @@
 .login{
     color: whitesmoke;
     padding: 10px 10px;
+    margin-top: 0;
+}
+
+.loginContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
 }
 
 .background{
     height: 60vh;
+    width: 50vw;
     border: 0;
+    border-radius: 5px;
     padding: 0;
     outline: none;
     box-sizing: border-box;
     background: linear-gradient(#4b69ec, #8d9de4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 Input{
@@ -27,4 +40,8 @@ Input{
 Input:focus{
     outline: none;
     box-shadow: 0 4px 4px rgba(0, 0, 0, .25);
+}
+
+Form{
+    width: 100%;
 }

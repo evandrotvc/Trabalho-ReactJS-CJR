@@ -37,7 +37,6 @@
 
 .prevNextPage:hover{
   cursor: pointer;
-  opacity: 80%;
   background-color: rgb(61, 114, 158);
   color: white;
 }

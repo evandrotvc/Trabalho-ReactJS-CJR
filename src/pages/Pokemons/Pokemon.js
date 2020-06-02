@@ -124,9 +124,9 @@ class Pokemons extends Component{
           <Link style={{textDecoration:'none'}} to= {`/pokemons/${pokemon.name}`}>
           <div key={pokemon.id} 
           onClick={() => this.setState({setPokemonProfile: true})}
-           className="pokemonCard"
-           style =  {{background: this.handleType(pokemon.kind)}}
-           >
+          className="pokemonCard"
+          style =  {{background: this.handleType(pokemon.kind)}}
+          >
             <img src = {pokemon.image_url} alt="pokemon"></img>
             <div>              
               {pokemon.name}
